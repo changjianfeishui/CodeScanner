@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		37B269771D507F4B00CDA8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B269761D507F4B00CDA8AA /* AppDelegate.swift */; };
-		37B269791D507F4B00CDA8AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B269781D507F4B00CDA8AA /* ViewController.swift */; };
 		37B2697C1D507F4B00CDA8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B2697A1D507F4B00CDA8AA /* Main.storyboard */; };
 		37B2697E1D507F4B00CDA8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B2697D1D507F4B00CDA8AA /* Assets.xcassets */; };
 		37B269811D507F4B00CDA8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B2697F1D507F4B00CDA8AA /* LaunchScreen.storyboard */; };
+		37B2698C1D50814A00CDA8AA /* CodeScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2698B1D50814A00CDA8AA /* CodeScannerVC.swift */; };
+		37B2698E1D5085E900CDA8AA /* CodeScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2698D1D5085E900CDA8AA /* CodeScannerPresenter.swift */; };
+		37B269901D508C9F00CDA8AA /* CodeScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2698F1D508C9F00CDA8AA /* CodeScannerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37B269731D507F4B00CDA8AA /* CodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B269761D507F4B00CDA8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37B269781D507F4B00CDA8AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37B2697B1D507F4B00CDA8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37B2697D1D507F4B00CDA8AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B269801D507F4B00CDA8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37B269821D507F4B00CDA8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B2698B1D50814A00CDA8AA /* CodeScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScannerVC.swift; sourceTree = "<group>"; };
+		37B2698D1D5085E900CDA8AA /* CodeScannerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScannerPresenter.swift; sourceTree = "<group>"; };
+		37B2698F1D508C9F00CDA8AA /* CodeScannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScannerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		37B269751D507F4B00CDA8AA /* CodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				37B269881D50804C00CDA8AA /* Model */,
+				37B269891D50804C00CDA8AA /* Presenter */,
+				37B2698A1D50804C00CDA8AA /* View */,
 				37B269761D507F4B00CDA8AA /* AppDelegate.swift */,
-				37B269781D507F4B00CDA8AA /* ViewController.swift */,
-				37B2697A1D507F4B00CDA8AA /* Main.storyboard */,
 				37B2697D1D507F4B00CDA8AA /* Assets.xcassets */,
 				37B2697F1D507F4B00CDA8AA /* LaunchScreen.storyboard */,
 				37B269821D507F4B00CDA8AA /* Info.plist */,
 			);
 			path = CodeScanner;
+			sourceTree = "<group>";
+		};
+		37B269881D50804C00CDA8AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37B2698F1D508C9F00CDA8AA /* CodeScannerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37B269891D50804C00CDA8AA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				37B2698D1D5085E900CDA8AA /* CodeScannerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		37B2698A1D50804C00CDA8AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37B2697A1D507F4B00CDA8AA /* Main.storyboard */,
+				37B2698B1D50814A00CDA8AA /* CodeScannerVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B269791D507F4B00CDA8AA /* ViewController.swift in Sources */,
+				37B2698E1D5085E900CDA8AA /* CodeScannerPresenter.swift in Sources */,
+				37B2698C1D50814A00CDA8AA /* CodeScannerVC.swift in Sources */,
 				37B269771D507F4B00CDA8AA /* AppDelegate.swift in Sources */,
+				37B269901D508C9F00CDA8AA /* CodeScannerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +181,7 @@
 				37B2697B1D507F4B00CDA8AA /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37B2697F1D507F4B00CDA8AA /* LaunchScreen.storyboard */ = {
@@ -250,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XB.CodeScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XB.CodeScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,6 +321,7 @@
 				37B269871D507F4B00CDA8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
